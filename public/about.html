@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — ServiceHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">ServiceHub</a>
+            <nav class="nav">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+            <form class="search-box" action="search.html" method="get">
+                <input type="text" name="q" placeholder="Поиск услуг...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-btns">
+                <a href="login.html" class="btn btn-outline">Войти</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>О компании</h1>
+            <p>Мы создаём удобную платформу для поиска специалистов</p>
+        </div>
+    </div>
+
+    <section class="section section-white">
+        <div class="container">
+            <h2>Наша миссия</h2>
+            <p style="max-width:720px; margin:0 auto; text-align:center; font-size:16px; color:var(--gray-text); line-height:1.8;">
+                ServiceHub — это маркетплейс услуг, который соединяет клиентов с проверенными
+                специалистами. Мы делаем так, чтобы поиск мастера занимал минуты, а не дни.
+                Безопасная оплата, реальные отзывы, честные цены.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    
+                    <h3>Безопасность</h3>
+                    <p>Все специалисты проходят верификацию. Оплата через Escrow — деньги переходят исполнителю только после подтверждения работы.</p>
+                </div>
+                <div class="about-card">
+                    
+                    <h3>Честные отзывы</h3>
+                    <p>Только реальные отзывы от подтверждённых заказчиков. Никаких накруток — рейтинг отражает настоящее качество.</p>
+                </div>
+                <div class="about-card">
+                    
+                    <h3>Быстро и удобно</h3>
+                    <p>Найдите специалиста за 5 минут. Встроенный чат, удобное расписание и напоминания — всё в одном месте.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Цифры платформы</h2>
+            <div class="stats" style="justify-content:center; gap:48px; flex-wrap:wrap;">
+                <div class="stat" style="color:var(--dark-blue);">
+                    <span class="stat-num" style="color:var(--blue);">12 500+</span>
+                    <span class="stat-label" style="color:var(--gray-text);">Исполнителей</span>
+                </div>
+                <div class="stat" style="color:var(--dark-blue);">
+                    <span class="stat-num" style="color:var(--blue);">48 000+</span>
+                    <span class="stat-label" style="color:var(--gray-text);">Отзывов</span>
+                </div>
+                <div class="stat" style="color:var(--dark-blue);">
+                    <span class="stat-num" style="color:var(--blue);">95 000+</span>
+                    <span class="stat-label" style="color:var(--gray-text);">Заказов выполнено</span>
+                </div>
+                <div class="stat" style="color:var(--dark-blue);">
+                    <span class="stat-num" style="color:var(--blue);">8</span>
+                    <span class="stat-label" style="color:var(--gray-text);">Категорий услуг</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-white">
+        <div class="container">
+            <h2>Команда</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="spec-avatar" style="margin:0 auto 12px; width:64px; height:64px; font-size:22px;">АК</div>
+                    <h3>Артём Климов</h3>
+                    <p style="color:var(--blue); margin-bottom:8px;">CEO & Co-founder</p>
+                    <p>Отвечает за стратегию развития и партнёрства.</p>
+                </div>
+                <div class="about-card">
+                    <div class="spec-avatar" style="margin:0 auto 12px; width:64px; height:64px; font-size:22px;">МС</div>
+                    <h3>Мария Соколова</h3>
+                    <p style="color:var(--blue); margin-bottom:8px;">CTO</p>
+                    <p>Руководит разработкой платформы и технической командой.</p>
+                </div>
+                <div class="about-card">
+                    <div class="spec-avatar" style="margin:0 auto 12px; width:64px; height:64px; font-size:22px;">ДН</div>
+                    <h3>Денис Новиков</h3>
+                    <p style="color:var(--blue); margin-bottom:8px;">Head of Product</p>
+                    <p>Отвечает за пользовательский опыт и развитие продукта.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color:var(--dark-blue); text-align:center; padding: 48px 0;">
+        <div class="container">
+            <h2 style="color:var(--white);">Присоединяйтесь к ServiceHub</h2>
+            <p style="color:rgba(255,255,255,0.75); margin-bottom:28px; font-size:16px;">Станьте частью растущей платформы — как клиент или специалист</p>
+            <a href="register.html" class="btn btn-accent" style="margin-right:12px;">Зарегистрироваться</a>
+            <a href="catalog.html" class="btn" style="border:2px solid rgba(255,255,255,0.5); color:var(--white);">Смотреть каталог</a>
+        </div>
+    </section>
+
+        <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ServiceHub</strong>
+                <p>Найдите специалиста быстро и безопасно.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+                <a href="blog.html">Блог</a>
+            </div>
+            <div class="footer-col">
+                <h4>Правовое</h4>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">info@servicehub.ru</span>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">+7 (3952) 704-256</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 ServiceHub. Разработано IT-компанией «Digital Solutions»
+            </div>
+        </div>
+    </footer>
+        function doSearch() {
+            var q = document.getElementById('header-search').value;
+            window.location.href = 'search.html?q=' + encodeURIComponent(q);
+        }
+
+<script src="auth-check.js"></script>
+
+</body>
+</html>

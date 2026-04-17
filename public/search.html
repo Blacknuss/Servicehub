@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск услуг — ServiceHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">ServiceHub</a>
+            <nav class="nav">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+            <form class="search-box" action="search.html" method="get">
+                <input type="text" name="q" placeholder="Поиск услуг...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-btns">
+                <a href="login.html" class="btn btn-outline">Войти</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- СТРОКА ПОИСКА -->
+    <div class="search-bar-section">
+        <div class="container">
+            <form class="search-bar-inner" action="search.html" method="get">
+                <input type="text" name="q" placeholder="Введите услугу или специальность...">
+                <select name="category" style="padding:10px 14px; border:1px solid #ccc; border-radius:4px; font-size:15px;">
+                    <option value="">Все категории</option>
+                    <option>Ремонт</option>
+                    <option>Репетиторы</option>
+                    <option>Уборка</option>
+                    <option>Грузчики</option>
+                    <option>IT-услуги</option>
+                    <option>Дизайн</option>
+                    <option>Сантехника</option>
+                    <option>Красота</option>
+                </select>
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 48px; min-height: 200px;"></div>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ServiceHub</strong>
+                <p>Найдите специалиста быстро и безопасно.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+                <a href="blog.html">Блог</a>
+            </div>
+            <div class="footer-col">
+                <h4>Правовое</h4>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">info@servicehub.ru</span>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">+7 (3952) 704-256</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 ServiceHub. Разработано IT-компанией «Digital Solutions»
+            </div>
+        </div>
+    </footer>
+<script src="auth-check.js"></script>
+</body>
+</html>

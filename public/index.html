@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceHub — Найдите специалиста за 5 минут</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+        <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">ServiceHub</a>
+            <nav class="nav">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+            <form class="search-box" action="search.html" method="get">
+                <input type="text" name="q" placeholder="Поиск услуг...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-btns">
+                <a href="login.html" class="btn btn-outline">Войти</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ БЛОК -->
+    <section class="hero">
+        <div class="container">
+            <h1>Найдите специалиста за 5 минут</h1>
+            <p>Тысячи проверенных мастеров готовы помочь.<br>
+            Ремонт, репетиторы, уборка и многое другое.</p>
+            <a href="search.html" class="btn btn-accent">Найти услугу</a>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">12 500+</span>
+                    <span class="stat-label">Исполнителей</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">48 000+</span>
+                    <span class="stat-label">Отзывов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">95 000+</span>
+                    <span class="stat-label">Заказов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТЕГОРИИ -->
+    <section class="section" id="categories">
+        <div class="container">
+            <h2>Популярные категории</h2>
+            <div class="categories">
+                <a href="catalog.html?cat=remont" class="category">
+                    <div class="cat-icon">РМ</div>
+                    <span>Ремонт</span>
+                </a>
+                <a href="catalog.html?cat=repetitor" class="category">
+                    <div class="cat-icon">РП</div>
+                    <span>Репетиторы</span>
+                </a>
+                <a href="catalog.html?cat=uborka" class="category">
+                    <div class="cat-icon">УБ</div>
+                    <span>Уборка</span>
+                </a>
+                <a href="catalog.html?cat=gruzchiki" class="category">
+                    <div class="cat-icon">ГР</div>
+                    <span>Грузчики</span>
+                </a>
+                <a href="catalog.html?cat=it" class="category">
+                    <div class="cat-icon">ИТ</div>
+                    <span>IT-услуги</span>
+                </a>
+                <a href="catalog.html?cat=design" class="category">
+                    <div class="cat-icon">ДЗ</div>
+                    <span>Дизайн</span>
+                </a>
+                <a href="catalog.html?cat=santehnika" class="category">
+                    <div class="cat-icon">СТ</div>
+                    <span>Сантехника</span>
+                </a>
+                <a href="catalog.html?cat=beauty" class="category">
+                    <div class="cat-icon">КР</div>
+                    <span>Красота</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Выберите услугу</h3>
+                    <p>Найдите специалиста через каталог или поиск.</p>
+                </div>
+                <div class="step-arrow">&#8594;</div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Свяжитесь с мастером</h3>
+                    <p>Обсудите детали через встроенный чат.</p>
+                </div>
+                <div class="step-arrow">&#8594;</div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Оплатите через Escrow</h3>
+                    <p>Деньги переходят мастеру после подтверждения.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+        <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ServiceHub</strong>
+                <p>Найдите специалиста быстро и безопасно.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+                <a href="blog.html">Блог</a>
+            </div>
+            <div class="footer-col">
+                <h4>Правовое</h4>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">info@servicehub.ru</span>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">+7 (3952) 704-256</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 ServiceHub. Разработано IT-компанией «Digital Solutions»
+            </div>
+        </div>
+    </footer>
+
+    <script src="auth-check.js"></script>
+
+</body>
+</html>

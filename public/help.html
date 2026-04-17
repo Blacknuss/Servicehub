@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь — ServiceHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">ServiceHub</a>
+            <nav class="nav">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+            <form class="search-box" action="search.html" method="get">
+                <input type="text" name="q" placeholder="Поиск услуг...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-btns">
+                <a href="login.html" class="btn btn-outline">Войти</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1>Помощь</h1>
+            <p>Ответы на частые вопросы и контакты поддержки</p>
+        </div>
+    </div>
+
+    <!-- РАЗДЕЛЫ ПОМОЩИ -->
+    <section class="section section-white">
+        <div class="container">
+            <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-bottom:48px;">
+                <a href="#faq-clients" class="about-card" style="text-decoration:none; color:inherit;">
+                    
+                    <h3>Для заказчиков</h3>
+                    <p>Как найти специалиста, оплатить и оставить отзыв.</p>
+                </a>
+                <a href="#faq-exec" class="about-card" style="text-decoration:none; color:inherit;">
+                    
+                    <h3>Для исполнителей</h3>
+                    <p>Как зарегистрироваться, получать заказы и выводить деньги.</p>
+                </a>
+                <a href="#faq-pay" class="about-card" style="text-decoration:none; color:inherit;">
+                    
+                    <h3>Оплата и безопасность</h3>
+                    <p>Как работает Escrow, возвраты и защита сделок.</p>
+                </a>
+            </div>
+
+            <!-- FAQ ДЛЯ ЗАКАЗЧИКОВ -->
+            <h2 id="faq-clients">Вопросы заказчиков</h2>
+            <div class="faq-list" style="margin-bottom:40px;">
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Как найти подходящего специалиста?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Воспользуйтесь поиском или выберите категорию в каталоге. Вы можете фильтровать
+                        результаты по рейтингу, цене и отзывам. После нахождения специалиста напишите
+                        ему в чате и обсудите детали заказа.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Как оплатить услугу?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Оплата происходит через систему Escrow. Вы вносите деньги на счёт платформы
+                        до начала работы. Средства переходят специалисту только после того, как вы
+                        подтвердите выполнение заказа. Поддерживаются карты Visa, МИР, Mastercard.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Что если специалист не выполнил работу?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Если работа не выполнена или выполнена некачественно, откройте спор в личном
+                        кабинете. Служба поддержки рассмотрит ситуацию и при необходимости вернёт деньги
+                        в течение 3 рабочих дней.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Как оставить отзыв?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        После завершения заказа в вашем личном кабинете появится запрос на оценку.
+                        Вы можете поставить оценку от 1 до 5 звёзд и написать комментарий.
+                        Оставить отзыв можно в течение 14 дней после закрытия заказа.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ ДЛЯ ИСПОЛНИТЕЛЕЙ -->
+            <h2 id="faq-exec">Вопросы исполнителей</h2>
+            <div class="faq-list" style="margin-bottom:40px;">
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Как начать принимать заказы?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Зарегистрируйтесь, выбрав роль «Предлагать услуги». Заполните профиль, укажите
+                        специализацию, опыт и стоимость услуг. После модерации (1–2 рабочих дня) ваш
+                        профиль появится в каталоге.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Как вывести заработанные деньги?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        В личном кабинете перейдите в раздел «Финансы» и нажмите «Вывести средства».
+                        Поддерживается вывод на банковские карты и счета. Минимальная сумма — 500 ₽.
+                        Срок зачисления — 1–3 рабочих дня.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Какая комиссия у платформы?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Платформа удерживает комиссию 10% от каждой успешно выполненной сделки.
+                        Это покрывает обработку платежей, поддержку и развитие сервиса.
+                        Никаких скрытых платежей нет.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ ОБ ОПЛАТЕ -->
+            <h2 id="faq-pay">Оплата и безопасность</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Что такое Escrow?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Escrow — это защищённое хранение средств. Заказчик переводит деньги на счёт
+                        платформы. Специалист видит, что оплата зарезервирована, и приступает к работе.
+                        Средства переходят исполнителю только после подтверждения завершения работы.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" style="cursor:default;">Мои данные в безопасности?</div><div class="faq-answer" style="max-height:none; padding:0 20px 18px;">
+                        Мы используем шифрование SSL/TLS для всех соединений. Платёжные данные
+                        обрабатываются сертифицированным платёжным провайдером и не хранятся на
+                        наших серверах. Подробнее — в <a href="privacy.html" style="color:var(--blue);">политике конфиденциальности</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТ ПОДДЕРЖКИ -->
+    <section class="section" style="background-color:var(--dark-blue); text-align:center; padding:48px 0;">
+        <div class="container">
+            <h2 style="color:var(--white);">Не нашли ответ?</h2>
+            <p style="color:rgba(255,255,255,0.75); margin-bottom:24px;">Наша поддержка работает ежедневно с 9:00 до 21:00</p>
+            <span class="btn btn-accent" style="margin-right:12px; cursor:default;">Написать на почту</span>
+            <span class="btn" style="border:2px solid rgba(255,255,255,0.5); color:var(--white); cursor:default;">
+                +7 (3952) 704-256
+            </span>
+        </div>
+    </section>
+
+        <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>ServiceHub</strong>
+                <p>Найдите специалиста быстро и безопасно.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="about.html">О нас</a>
+                <a href="help.html">Помощь</a>
+                <a href="blog.html">Блог</a>
+            </div>
+            <div class="footer-col">
+                <h4>Правовое</h4>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">info@servicehub.ru</span>
+                <span style="color:rgba(255,255,255,0.65); font-size:14px;">+7 (3952) 704-256</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 ServiceHub. Разработано IT-компанией «Digital Solutions»
+            </div>
+        </div>
+    </footer>
+
+    <script src="auth-check.js"></script>
+
+</body>
+</html>
