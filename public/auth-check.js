@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const token = localStorage.getItem('sh_token'); // ← читаем токен из хранилища
+    const token = localStorage.getItem('sh_token'); // читаем токен из хранилища
     const headerBtns = document.querySelector('.header-btns');
     if (!headerBtns) return;
 
