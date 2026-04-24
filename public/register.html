@@ -98,6 +98,21 @@
         async function submitRegister() {
             const msg = document.getElementById('reg-msg');
             const btn = document.getElementById('reg-btn');
+
+            // Клиентская валидация
+            const password  = document.getElementById('password').value;
+            const password2 = document.getElementById('password2').value;
+            if (password.length > 0 && password !== password2) {
+                msg.style.color = 'red';
+                msg.textContent = '✗ Пароли не совпадают';
+                return;
+            }
+            if (password.length > 0 && password.length < 8) {
+                msg.style.color = 'red';
+                msg.textContent = '✗ Пароль должен содержать минимум 8 символов';
+                return;
+            }
+
             btn.disabled = true; btn.textContent = 'Загрузка...';
 
             try {

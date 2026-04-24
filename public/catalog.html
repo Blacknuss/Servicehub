@@ -80,79 +80,8 @@
                         <option>По отзывам</option>
                     </select>
                 </div>
-                <div class="catalog-grid">
-                <div class="spec-card">
-                    <div class="spec-avatar">АМ</div>
-                    <div class="spec-name">Алексей М.</div>
-                    <div class="spec-cat">Ремонт</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 1 200 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">ИК</div>
-                    <div class="spec-name">Ирина К.</div>
-                    <div class="spec-cat">Репетиторы</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 800 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">ДС</div>
-                    <div class="spec-name">Дмитрий С.</div>
-                    <div class="spec-cat">IT-услуги</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 1 500 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">НП</div>
-                    <div class="spec-name">Наталья П.</div>
-                    <div class="spec-cat">Уборка</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 600 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">РВ</div>
-                    <div class="spec-name">Роман В.</div>
-                    <div class="spec-cat">Грузчики</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 700 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">СГ</div>
-                    <div class="spec-name">Светлана Г.</div>
-                    <div class="spec-cat">Красота</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 1 000 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">АФ</div>
-                    <div class="spec-name">Андрей Ф.</div>
-                    <div class="spec-cat">Сантехника</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 1 100 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">ОД</div>
-                    <div class="spec-name">Ольга Д.</div>
-                    <div class="spec-cat">Дизайн</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 2 000 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-avatar">КТ</div>
-                    <div class="spec-name">Кирилл Т.</div>
-                    <div class="spec-cat">Ремонт</div>
-                    <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
-                    <div class="spec-price">от 950 руб./час</div>
-                    <a href="#" class="btn btn-primary">Написать</a>
-                </div>
+                <div class="catalog-grid" id="catalog-grid">
+                <!-- Карточки рендерятся через JS -->
                 </div>
             </main>
 
@@ -188,6 +117,73 @@
             </div>
         </div>
     </footer>
+<script>
+    const SPECIALISTS = [
+        { initials:'АМ', name:'Алексей М.', cat:'remont',     label:'Ремонт',      price:1200 },
+        { initials:'ИК', name:'Ирина К.',   cat:'repetitor',  label:'Репетиторы',  price:800  },
+        { initials:'ДС', name:'Дмитрий С.', cat:'it',         label:'IT-услуги',   price:1500 },
+        { initials:'НП', name:'Наталья П.', cat:'uborka',     label:'Уборка',      price:600  },
+        { initials:'РВ', name:'Роман В.',   cat:'gruzchiki',  label:'Грузчики',    price:700  },
+        { initials:'СГ', name:'Светлана Г.',cat:'beauty',     label:'Красота',     price:1000 },
+        { initials:'АФ', name:'Андрей Ф.', cat:'santehnika', label:'Сантехника',  price:1100 },
+        { initials:'ОД', name:'Ольга Д.',  cat:'design',     label:'Дизайн',      price:2000 },
+        { initials:'КТ', name:'Кирилл Т.', cat:'remont',     label:'Ремонт',      price:950  },
+    ];
+
+    function renderCatalog(list) {
+        const grid    = document.getElementById('catalog-grid');
+        const countEl = document.querySelector('.catalog-top span');
+        countEl.textContent = 'Найдено: ' + list.length + ' специалистов';
+        if (!list.length) {
+            grid.innerHTML = '<p style="color:var(--gray-text); padding:24px 0;">Специалисты не найдены. Попробуйте изменить фильтры.</p>';
+            return;
+        }
+        grid.innerHTML = list.map(s => `
+            <div class="spec-card">
+                <div class="spec-avatar">${s.initials}</div>
+                <div class="spec-name">${s.name}</div>
+                <div class="spec-cat">${s.label}</div>
+                <div style="font-size:14px; color:var(--gray-text);">0 отзывов</div>
+                <div class="spec-price">от ${s.price.toLocaleString('ru-RU')} руб./час</div>
+                <a href="#" class="btn btn-primary">Написать</a>
+            </div>`).join('');
+    }
+
+    function applyFilters() {
+        const catRadio = document.querySelector('input[name="cat"]:checked');
+        const selCat   = catRadio ? catRadio.value : '';
+        const from     = parseInt(document.getElementById('price-from').value) || 0;
+        const to       = parseInt(document.getElementById('price-to').value) || Infinity;
+        const sortVal  = document.querySelector('.catalog-top select').value;
+
+        let result = SPECIALISTS.filter(s => {
+            if (selCat && s.cat !== selCat) return false;
+            if (s.price < from || s.price > to)  return false;
+            return true;
+        });
+
+        if (sortVal === 'По цене (возрастание)') result.sort((a, b) => a.price - b.price);
+        else if (sortVal === 'По цене (убывание)') result.sort((a, b) => b.price - a.price);
+
+        renderCatalog(result);
+    }
+
+    // Читаем параметр cat= из URL (переход с главной страницы — БАГ-11)
+    const urlCat = new URLSearchParams(window.location.search).get('cat');
+    if (urlCat) {
+        const radio = document.querySelector(`input[name="cat"][value="${urlCat}"]`);
+        if (radio) radio.checked = true;
+    }
+
+    // Подключаем обработчики событий
+    document.querySelectorAll('input[name="cat"]').forEach(r =>
+        r.addEventListener('change', applyFilters));
+    document.querySelector('.sidebar-block .form-btn').addEventListener('click', applyFilters);
+    document.querySelector('.catalog-top select').addEventListener('change', applyFilters);
+
+    // Первичный рендер
+    applyFilters();
+</script>
 <script src="auth-check.js"></script>
 </body>
 </html>

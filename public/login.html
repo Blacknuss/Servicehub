@@ -101,7 +101,7 @@
                 const data = await res.json();
                 if (res.ok) {
                     localStorage.setItem('sh_token', data.token);
-                    localStorage.setItem('sh_name', data.user.fullName);
+                    localStorage.setItem('sh_name', data.user.FullName);
                     window.location.href = 'dashboard.html';
                 } else {
                     msg.style.color = 'red';
