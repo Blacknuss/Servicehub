@@ -8,10 +8,26 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+const allowedOrigins = process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',').map(o => o.trim())
+    : ['http://localhost:3000'];
+
+app.use(cors({
+    origin: (origin, callback) => {
+        // Разрешить запросы без origin (Postman, curl, SSR) только в dev-режиме
+        if (!origin) return callback(null, process.env.NODE_ENV !== 'production');
+        if (allowedOrigins.includes(origin)) return callback(null, true);
+        callback(new Error('Запрос с недоверенного источника: ' + origin));
+    },
+    credentials: true
+}));
 app.use(express.static('public'));
 
-const JWT_SECRET = process.env.JWT_SECRET || 'change_this_secret';
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+    console.error('КРИТИЧЕСКАЯ ОШИБКА: переменная окружения JWT_SECRET не задана. Запуск прерван.');
+    process.exit(1);
+}
 
 // Middleware: проверка токена
 function authMiddleware(req, res, next) {
@@ -95,7 +111,7 @@ app.post('/api/login', async (req, res) => {
         res.json({
             message: 'Вход выполнен',
             token,
-            user: { id: user.Id, fullName: user.FullName, email: user.Email, phone: user.Phone }
+            user: { id: user.Id, FullName: user.FullName, email: user.Email, phone: user.Phone }
         });
 
     } catch (err) {
